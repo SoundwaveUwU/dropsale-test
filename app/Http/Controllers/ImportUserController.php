@@ -15,7 +15,7 @@ class ImportUserController extends Controller
 
     public function store()
     {
-        $apiUrl = 'https://randomuser.me/api/?results=5000&inc=name,email,dob';
+        $apiUrl = 'https://randomuser.me/api/?results=5000&inc=name,email,dob&noinfo';
 
         $response = Http::get($apiUrl);
         $json = $response->json();
